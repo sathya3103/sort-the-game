@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sort the Code Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Sort the Code</h1>
+    <p>Select a coding challenge and drag-drop the lines to the correct order.</p>
+
+    <select id="problemSelector" onchange="loadProblem()">
+      <option value="">-- Select a Problem --</option>
+      <option value="bubbleSort">Bubble Sort</option>
+      <option value="insertionSort">Insertion Sort</option>
+      <option value="factorial">Factorial (Recursive)</option>
+      <option value="palindrome">Palindrome Checker</option>
+      <option value="fibonacci">Fibonacci Series</option>
+      <option value="linearSearch">Linear Search</option>
+    </select>
+
+    <div id="stats">
+      <span id="timer">⏱️ 0s</span>
+      <span id="score">🏆 Score: 0</span>
+    </div>
+
+    <div id="code-container" class="code-container"></div>
+    <button onclick="checkOrder()">✅ Check Order</button>
+    <p id="result"></p>
+    <canvas id="confetti"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
